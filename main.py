@@ -15,10 +15,13 @@ def getHome():
 def about():
   return render_template('about.html')
 
+@app.route('/index')
+def index():
+  return render_template('index.html')
+
 @app.route('/contact')
 def contact():
   return render_template('contact.html', phone = "123")
-
 
 @app.route('/params')
 def params():
@@ -57,3 +60,4 @@ def fileWork():
 
 if __name__ == '__main__':
   app.run(host="0.0.0.0", threaded=True, port=5050, debug=True) 
+
